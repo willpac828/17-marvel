@@ -1,0 +1,55 @@
+$c-brand-navy: #2c3e50;
+$c-brand-white: #ecf0f1;
+$c-brand-dark-gray: #3b3b3b;
+$c-brand-font-reg: 'Maven Pro', sans-serif;
+$c-brand-font-special: 'Special Elite', sans-serif;
+$c-brand-modal-bg: rgba(0, 0, 0, 0.8);
+
+$m-gutter: 1rem;
+$m-container-width: 60rem;
+$m-brand-border-radius: 0.4rem;
+
+$b-brand-border: 1px solid #000;
+
+.content {
+  display: flex;
+
+}
+
+.side-bar {
+  display: flex;  // not sure about these two lines
+  flex-direction: column;
+
+  &__img {
+    max-width: 15rem;
+    border-radius: 5%;
+  }
+
+  &__title {
+    margin: 1rem 0 0.5rem;
+    font-family: $c-brand-font-reg;
+    font-size: 1.5rem;
+
+  }
+
+  &__date {
+    margin: 0.5rem 0;
+    font-family: $c-brand-font-reg;
+  }
+
+  &__creator {
+    margin: 0.5rem 0;
+    border-bottom: 1px solid $c-brand-modal-bg;
+    font-family: $c-brand-font-special;
+    font-size: 1.5rem;
+  }
+
+  &__list {
+    font-family: $c-brand-font-reg;
+  }
+
+  &__list-item {
+    font-family: inherit;
+  }
+
+}

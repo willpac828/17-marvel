@@ -1,0 +1,47 @@
+.main {
+  flex-grow: 1;
+  margin-left: $m-gutter;
+
+  &__heading {
+    border-bottom: 1px solid $c-brand-modal-bg;
+    font-family: $c-brand-font-special;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+  &__item {
+    flex-basis: calc(100% / 4 - 2rem);
+    margin: 0 1rem;
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 8rem;
+  }
+
+  &__name {
+    font-family: $c-brand-font-reg;
+  }
+}
+
+.edition {
+  font-family: $c-brand-font-reg;
+  font-weight: bold;
+
+  &-date {
+    font-family: $c-brand-font-reg;
+  }
+}
+
+.btn {
+  background-color: $c-brand-navy;
+  color: $c-brand-white;
+  text-align: center;
+  border-radius: 15%;
+  border: none;
+}
