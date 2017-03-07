@@ -11,3 +11,58 @@
   <script src="/app.js" charset="utf-8"></script>
 </body>
 </html>
+
+
+
+
+// reducer
+
+// Lets us use the combine Reducers function at the bottom instead of
+// individually exporting each function
+// Its a property of an object, hence the notation
+import { combineReducers } from 'redux';
+
+function seriesInfo(state, action) {
+
+}
+
+function characterData(state, action) {
+
+}
+
+function comicData(state, action) {
+
+}
+
+function modal(state, action) {
+
+}
+
+// Notation for exporting combined Reducers.
+// They are properties of an obj, hence the commas
+export default combineReducers({
+  seriesInfo,
+  characterData,
+  comicData,
+  modal
+});
+
+
+// reducer-test
+
+import reducer from '../app/reducer';
+
+module('reducer', () => {
+  test('it exists', (assert) => {
+    assert.ok(reducer, 'reducer exists');
+  });
+
+  test('series info replaces old series info', (assert) => {
+  // should seriesInfo be an array?
+    const oldState = { seriesInfo: [{ name: 'spongebob', date: '1939' }] };
+    const actionOne = { type: 'SERIES_INFO@LOAD', data: { name: 'spiderman', date: '1631' } };
+
+    assert.ok(true);
+    assert.deepEqual(reducer(oldState, actionOne), { seriesInfo: [{ name: 'spiderman', date: '1631' }] });
+  });
+});

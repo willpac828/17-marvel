@@ -4,8 +4,11 @@
 // Its a property of an object, hence the notation
 import { combineReducers } from 'redux';
 
-function seriesInfo(state, action) {
 
+function seriesInfo(state, action) {
+  if (action.type === 'SERIES_INFO@LOAD') {
+    return (action.data);
+  }
 }
 
 function characterData(state, action) {
